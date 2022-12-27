@@ -3,12 +3,18 @@ description: Get started with Jujutsu.js in the official documentation, and lear
 ---
 
 import Callout from '../../components/callout'
+import Balancer from 'react-wrap-balancer'
 
 # Getting Started
 
 Welcome to the Jujutsu.js documentation!
 
 If you have questions about anything related to Jujutsu.js, you're always welcome to ask our community on [GitHub Discussions](https://github.com/vajitsu/jujutsu.js/discussions).
+
+<Callout>
+  This documentation assumes that you have a decent amount of knowledge about [Discord.js](https://github.com/discordjs/discord.js).   
+  Not having prior knowledge of this library will hinder your experience with this framework.
+</Callout>
 
 ## Creating a Discord Application
 
@@ -33,7 +39,9 @@ If you have already created a `jujutsu.config.js`, add the token to the `discord
 
 If not, create a `jujutsu.config.js` and add the following:
 
-```js filename="jujutsu.config.js"
+<CH.Section showCopyButton={true}>
+
+```javascript jujutsu.config.js
 /** @type {import('jujutsu').JujutsuConfig} */
 const jujutsuConfig = {
   discord: {
@@ -44,7 +52,9 @@ const jujutsuConfig = {
 module.exports = jujutsuConfig
 ```
 
-> Replace `'your-token-goes-here'` with your bot's Discord token.
+Replace [`your-token-goes-here`](focus://4[13:32]) with your bot's Discord token.
+
+</CH.Section>
 
 <Callout>
   **Never** share your token with anybody. If you accidentally share your bot's token, immediately reset it in the [Discord Developer Portal](https://discord.com/developers/applications). Make sure to update your token in your Jujutsu.js project.

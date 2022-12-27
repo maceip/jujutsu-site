@@ -1,12 +1,11 @@
 {
   "*": {
     "theme": {
-      "breadcrumb": false,
-      "footer": false,
+      "breadcrumb": true,
+      "footer": true,
       "sidebar": true,
       "toc": true,
-      "pagination": true,
-      "layout": "full"
+      "pagination": true
     }
   },
   "getting-started": "Getting Started",

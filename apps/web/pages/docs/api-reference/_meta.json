@@ -1,5 +1,5 @@
 {
-  "file-conventions": "File Conventions",
+  "cli": "Jujutsu.js CLI",
   "create-jujutsu-app": "create-jujutsu-app",
-  "cli": "CLI"
+  "file-conventions": "File Conventions"
 }

@@ -2,4 +2,82 @@ import Callout from '../../../components/callout'
 
 # Jujutsu.js CLI
 
-<Callout>This page is currently being worked on.</Callout>
+The Jujutsu.js CLI allows you to start, build, and develop your application.
+
+To get a list of the available CLI commands, run the following command inside your project directory:
+
+<CH.Code showCopyButton={true}>
+```bash Terminal
+npx jujutsu --help
+```
+</CH.Code>
+
+*([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) comes with npm 5.2+ and higher)*
+
+The output should look like this:
+
+```bash Terminal
+Usage
+  $ jujutsu <command>
+
+Available commands
+  build, start, dev, info
+
+Options
+  --version, -v   Version number
+  --help, -h      Displays this message
+
+For more information run a command with the --help flag
+  $ jujutsu build --help
+```
+
+You can pass any [node arguments](https://nodejs.org/api/cli.html#cli_node_options_options) to `jujutsu` commands:
+
+```bash Terminal
+NODE_OPTIONS='--throw-deprecation' jujutsu
+NODE_OPTIONS='-r esm' jujutsu
+NODE_OPTIONS='--inspect' jujutsu
+```
+
+> **Note:** Running `jujutsu` without a command is the same as running `jujutsu dev`
+
+## Build and Development
+
+`jujutsu build` and `jujutsu dev` creates an optimized production build of your application. The output displays a end-to-end benchmark, it may also display errors or warnings in some cases.
+
+Although `jujutsu dev` and `jujutsu build` have the same ouput in `.jujutsu`, during development you have hot-code reloading, error reporting, and more.
+
+## Production
+
+`jujutsu start` starts the application in production mode. The application should be compiled with `jujutsu build` first.
+
+The application will start at the Discord bot using the provided token. If the token is invalid or their is not one provided, an error will be displayed.
+
+## Info
+
+`jujutsu info` prints relevant details about the current system which can be used to report Jujutsu.js bugs. This information includes Operating System platform/arch/version, Binaries (Node.js, npm, Yarn, pnpm) and npm package versions (`jujutsu`, `discord.js`).
+
+Running the following in your project's root directory:
+
+```bash Terminal
+jujutsu info
+```
+
+The output will give you information like this example:
+
+```bash Terminal
+Operating System:
+  Platform: win32
+  Arch: x64
+  Version: Windows 10 Pro
+Binaries:
+  Node: 18.12.0
+  npm: 8.19.2
+  Yarn: 1.22.19
+  pnpm: 7.19.0
+Relevant packages:
+  jujutsu: 1.0.0
+  discord.js: 14.7.1
+```
+
+This information should then be pasted into GitHub Issues.

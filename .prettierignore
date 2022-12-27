@@ -1,0 +1,9 @@
+node_modules
+**/.next/**
+**/dist/**
+**/__tmp__/**
+pnpm-lock.yaml
+package.json
+apps/web/tsconfig.json
+apps/web/styles/globals.css
+apps/web/**/*.mdx

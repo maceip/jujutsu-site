@@ -1,5 +1,23 @@
 import Callout from '../../../../components/callout'
 
-# Command
+# `command.js`
 
-<Callout>This page is currently being worked on.</Callout>
+A **command** is short for a slash command, this is the most common way users interact with a Discord bot.
+
+```typescript app/hello/command.ts
+export const description = 'Hello world!'
+
+export default function Hello({ interaction }: Jujutsu.CommandProps) {
+  interaction.reply(`Hello, ${interaction.user?.tag}!`)
+}
+```
+
+### Props
+
+#### `interaction`
+
+This is the interaction object passed through Discord.js. Learn more [here](https://discord.js.org/docs/discord.js/main/class/ChatInputCommandInteraction)
+
+#### `client`
+
+The Discord bot that you are currently logged into. Learn more [here](https://discord.js.org/docs/discord.js/main/class/Client)

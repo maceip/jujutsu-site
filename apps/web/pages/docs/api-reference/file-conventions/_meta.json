@@ -1,3 +1,5 @@
 {
-  "command": "Command"
+  "command": "Command",
+  "subcommand": "Subcommand",
+  "event": "Event"
 }
