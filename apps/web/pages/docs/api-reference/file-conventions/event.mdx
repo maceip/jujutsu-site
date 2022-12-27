@@ -5,10 +5,8 @@ import Callout from '../../../../components/callout'
 An **event** is a occurrence dispatched from the Discord API, most times in relation to your Discord bot's surroundings.
 
 ```typescript app/hello/command.ts
-export const description = 'Hello world!'
-
-export default function Hello({ interaction }: Jujutsu.CommandProps) {
-  interaction.reply(`Hello, ${interaction.user?.tag}!`)
+export default function Ready({ client }: Jujutsu.EventProps) {
+  interaction.reply(`Hello, ${client.user?.tag}!`)
 }
 ```
 
