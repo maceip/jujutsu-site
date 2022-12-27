@@ -24,7 +24,7 @@ const theme: DocsThemeConfig = {
     placeholder: 'Search documentation...',
   },
   project: {
-    link: 'https://gitlab.com/vajitsu/jujutsu-site',
+    link: 'https://gitlab.com/vajitsu/jujutsu.js',
   },
   feedback: {
     content: 'Question? Give us feedback 🠆',
