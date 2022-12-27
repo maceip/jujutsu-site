@@ -5,7 +5,7 @@ import classNames from "classnames";
 import React from "react";
 
 import { Inter } from "@next/font/google";
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 const theme: DocsThemeConfig = {
   logo: () => <></>,
@@ -13,7 +13,7 @@ const theme: DocsThemeConfig = {
   docsRepositoryBase:
     "https://github.com/vajitsu/jujutsu.js/blob/canary/apps/web",
   search: {
-    placeholder: "Search...",
+    placeholder: "Search documentation...",
   },
   project: {
     link: "https://gitlab.com/vajitsu/jujutsu.js",
@@ -53,7 +53,7 @@ const theme: DocsThemeConfig = {
       <a
         href="https://vercel.com/?utm_source=jujutsu-js"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         className="inline-flex items-center no-underline text-current"
       >
         <span className="mr-1">Powered by</span>
@@ -91,8 +91,10 @@ const theme: DocsThemeConfig = {
     </>
   ),
   gitTimestamp({ timestamp }) {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [dateString, setDateString] = React.useState(timestamp.toISOString());
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     React.useEffect(() => {
       try {
         setDateString(

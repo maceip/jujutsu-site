@@ -2,14 +2,18 @@
   "*": {
     "theme": {
       "breadcrumb": false,
-      "footer": true,
+      "footer": false,
       "sidebar": true,
       "toc": true,
-      "pagination": true
+      "pagination": true,
+      "layout": "full"
     }
   },
   "getting-started": "Getting Started",
   "installation": "Installation",
   "api-reference": "API Reference",
-  "deploying": "Deploying your project"
+  "deploying": "Deploying your project",
+  "messages": {
+    "display": "hidden"
+  }
 }

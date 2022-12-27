@@ -1,0 +1,12 @@
+{
+    "command-is-too-deep": {
+        "theme": {
+            "breadcrumb": false,
+            "footer": true,
+            "sidebar": true,
+            "toc": true,
+            "pagination": false,
+            "layout": "full"
+        }
+    }
+}
