@@ -1,0 +1,15 @@
+{
+  "*": {
+    "theme": {
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": true,
+      "toc": true,
+      "pagination": true
+    }
+  },
+  "getting-started": "Getting Started",
+  "installation": "Installation",
+  "api-reference": "API Reference",
+  "deploying": "Deploying your project"
+}
