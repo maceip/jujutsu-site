@@ -1,10 +1,11 @@
 import { useRouter } from 'next/router'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import { DocsThemeConfig, useTheme } from 'nextra-theme-docs'
 import classNames from 'clsx'
 import React from 'react'
 
-import { Inter } from '@next/font/google'
+import { Inter, Space_Mono } from '@next/font/google'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const spaceMono = Space_Mono({ weight: '400', subsets: ['latin'] })
 
 const Vercel = ({ height = 20 }) => (
   <svg height={height} viewBox="0 0 283 64" fill="none">
@@ -16,7 +17,16 @@ const Vercel = ({ height = 20 }) => (
 )
 
 const theme: DocsThemeConfig = {
-  logo: () => <></>,
+  logo: (
+    <span
+      className={classNames(
+        spaceMono.className,
+        'dark:text-white text-black italic select-none text-xl mt-[-4px]'
+      )}
+    >
+      jujutsu
+    </span>
+  ),
   logoLink: false,
   docsRepositoryBase:
     'https://github.com/vajitsu/jujutsu-site/blob/canary/apps/web',
@@ -24,7 +34,7 @@ const theme: DocsThemeConfig = {
     placeholder: 'Search documentation...',
   },
   project: {
-    link: 'https://gitlab.com/vajitsu/jujutsu.js',
+    link: 'https://github.com/vajitsu/jujutsu.js',
   },
   feedback: {
     content: 'Question? Give us feedback 🠆',

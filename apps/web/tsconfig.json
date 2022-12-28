@@ -22,7 +22,12 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "ui/*": ["./ui"],
+      "ui": ["./ui/index.tsx"]
+    }
   },
   "include": [
     "next-env.d.ts",

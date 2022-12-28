@@ -2,7 +2,8 @@
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx}', // Note the addition of the `app` directory.
-    './pages/**/*.{js,ts,jsx,tsx}',
+    './ui/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx,md}',
     './components/**/*.{js,ts,jsx,tsx}',
     './nextra.theme.{js,ts,jsx,tsx}',
   ],
@@ -10,4 +11,5 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  darkMode: 'class',
 }

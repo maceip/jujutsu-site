@@ -2,5 +2,9 @@
   "docs": {
     "title": "Docs",
     "type": "page"
+  },
+  "learn": {
+    "title": "Learn",
+    "type": "page"
   }
 }

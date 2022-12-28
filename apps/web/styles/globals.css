@@ -8,6 +8,14 @@ button[type='submit'] {
   @apply bg-black;
 }
 
+::selection {
+  @apply bg-[#f81ce5] text-white
+}
+
+a[href="/learn/what-is-jujutsujs"]:hover {
+  text-decoration: none !important;
+}
+
 html {
   font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1, "ss06" 1 !important;
 }
@@ -79,7 +87,7 @@ button[title="Change theme"],
 }
 
 .docs blockquote {
-  line-height: 1.233;
+  line-height: 1.4;
   font-style: unset !important;
   font-size: 15px;
   color: #555 !important;
@@ -163,4 +171,12 @@ article.nextra-body-typesetting-article h4 {
 
 html.dark .vercelLogo {
   filter: invert(0.6);
+}
+
+article.nextra-body-typesetting-article h1 {
+  text-align: left !important;
+}
+
+article.nextra-body-typesetting-article div > a:hover {
+  text-decoration-line: none;
 }

@@ -1,0 +1,11 @@
+{
+  "*": {
+    "theme": {
+      "typesetting": "article",
+      "sidebar": false,
+      "toc": false,
+      "pagination": false
+    }
+  },
+  "what-is-jujutsujs": "What is Jujutsu.js?"
+}

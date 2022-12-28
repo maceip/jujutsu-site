@@ -99,3 +99,10 @@
         U+1ea0-1ef9,
         U+20ab
 }
+@font-face {
+ font-family:Space Mono;
+ font-style:normal;
+ font-weight:400;
+ src:url(https://assets.vercel.com/raw/upload/v1659422347/fonts/space-mono/space-mono-v11-latin-regular.woff2) format("woff2");
+ font-display:optional
+}

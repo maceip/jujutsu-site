@@ -33,6 +33,11 @@ const nextConfig = {
         destination: '/docs',
         permanent: false,
       },
+      {
+        source: '/learn',
+        destination: '/learn/introduction',
+        permanent: false,
+      },
     ]
   },
 }
