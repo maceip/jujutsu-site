@@ -4,7 +4,7 @@ An **event** is a occurrence dispatched from the Discord API, most times in rela
 
 ```typescript app/ready/event.ts
 export default function Ready(client: Discord.Client) {
-  interaction.reply(`Hello, ${client.user?.tag}!`)
+  console.log(`Hello, ${client.user?.tag}!`)
 }
 ```
 
