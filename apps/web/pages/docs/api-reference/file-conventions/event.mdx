@@ -2,14 +2,18 @@
 
 An **event** is a occurrence dispatched from the Discord API, most times in relation to your Discord bot's surroundings.
 
-```typescript app/hello/command.ts
+```typescript app/ready/event.ts
 export default function Ready(client: Discord.Client) {
   interaction.reply(`Hello, ${client.user?.tag}!`)
 }
 ```
 
-### Props
+### Arguments
 
 #### `client`
 
 The Discord bot that you are currently logged into. Learn more [here](https://discord.js.org/docs/discord.js/main/class/Client)
+
+#### Arguments Passed By Discord.js
+
+All arguments after `client` are provided by Discord.js. For example, the `messageCreate` event arguments are [client](https://discord.js.org/docs/discord.js/main/class/Client) and [message](https://discord.js.org/docs/discord.js/main/class/Client/docs/discord.js/main/class/Message)

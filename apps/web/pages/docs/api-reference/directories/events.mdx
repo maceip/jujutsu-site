@@ -1,3 +1,19 @@
 # `events/`
 
 The **events** directory houses the events for your Discord bot.
+
+```typescript events/ready.ts
+export default function Ready(client: Discord.Client) {
+  interaction.reply(`Hello, ${client.user?.tag}!`)
+}
+```
+
+### Arguments
+
+#### `client`
+
+The Discord bot that you are currently logged into. Learn more [here](https://discord.js.org/docs/discord.js/main/class/Client)
+
+#### Arguments Passed By Discord.js
+
+All arguments after `client` are provided by Discord.js. For example, the `messageCreate` event arguments are [client](https://discord.js.org/docs/discord.js/main/class/Client) and [message](https://discord.js.org/docs/discord.js/main/class/Client/docs/discord.js/main/class/Message)
