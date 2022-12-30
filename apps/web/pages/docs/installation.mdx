@@ -94,7 +94,7 @@ Add the following code to `hello.js`:
 ```javascript commands/hello.js
 export const descripiton = 'Welcome to Jujutsu.js'
 
-export default function Hello({ interaction }: Jujutsu.CommandProps) {
+export default function Hello({ interaction }: Discord.CommandProps) {
   interaction.reply(`Hello, ${interaction.user?.tag}!`)
 }
 ```

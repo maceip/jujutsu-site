@@ -3,7 +3,7 @@
 An **event** is a occurrence dispatched from the Discord API, most times in relation to your Discord bot's surroundings.
 
 ```typescript app/hello/command.ts
-export default function Ready({ client }: Jujutsu.EventProps) {
+export default function Ready(client: Discord.Client) {
   interaction.reply(`Hello, ${client.user?.tag}!`)
 }
 ```

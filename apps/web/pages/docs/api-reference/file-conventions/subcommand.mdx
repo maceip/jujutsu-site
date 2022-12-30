@@ -5,7 +5,7 @@ A **subcommand** is an extenstion of a slash command, it is used to embed comman
 ```typescript app/hello/me/command.ts
 export const description = 'Hello world!'
 
-export default function Hello({ client }: Jujutsu.CommandProps) {
+export default function Hello({ client }: Discord.CommandProps) {
   interaction.reply(`Hello, I'm ${client.user?.tag}!`)
 }
 ```

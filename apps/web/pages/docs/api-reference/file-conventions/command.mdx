@@ -5,7 +5,7 @@ A **command** is short for a slash command, this is the most common way users in
 ```typescript app/hello/command.ts
 export const description = 'Hello world!'
 
-export default function Hello({ interaction }: Jujutsu.CommandProps) {
+export default function Hello({ interaction }: Discord.CommandProps) {
   interaction.reply(`Hello, ${interaction.user?.tag}!`)
 }
 ```
