@@ -1,5 +1,21 @@
-import Callout from 'ui/callout'
-
 # `subcommand.js`
 
-<Callout>This feature is currently being implemented.</Callout>
+A **subcommand** is an extenstion of a slash command, it is used to embed commands inside of each other.
+
+```typescript app/hello/me/command.ts
+export const description = 'Hello world!'
+
+export default function Hello({ client }: Jujutsu.CommandProps) {
+  interaction.reply(`Hello, I'm ${client.user?.tag}!`)
+}
+```
+
+### Props
+
+#### `interaction`
+
+This is the interaction object passed through Discord.js. Learn more [here](https://discord.js.org/docs/discord.js/main/class/ChatInputCommandInteraction)
+
+#### `client`
+
+The Discord bot that you are currently logged into. Learn more [here](https://discord.js.org/docs/discord.js/main/class/Client)

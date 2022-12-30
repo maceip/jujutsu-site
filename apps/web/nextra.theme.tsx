@@ -5,7 +5,11 @@ import React from 'react'
 
 import { Inter, Space_Mono } from '@next/font/google'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const spaceMono = Space_Mono({ weight: '400', subsets: ['latin'], variable: '--font-spacemono' })
+const spaceMono = Space_Mono({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-mono',
+})
 
 const Vercel = ({ height = 20 }) => (
   <svg height={height} viewBox="0 0 283 64" fill="none">
@@ -123,7 +127,14 @@ const theme: DocsThemeConfig = {
     return <>Last updated on {dateString}</>
   },
   main: ({ children }) => (
-    <div className={classNames(inter.className, inter.variable, spaceMono.variable, 'docs')}>
+    <div
+      className={classNames(
+        inter.className,
+        inter.variable,
+        spaceMono.variable,
+        'docs'
+      )}
+    >
       {children}
     </div>
   ),
